@@ -1172,7 +1172,7 @@ small {
 }
 .card {
 	width: 380px;
-	min-height: 200px;
+	min-height: 305px;
 	display: inline-block;
 	margin: 10px;
 	background-color: white;
@@ -1185,6 +1185,9 @@ small {
 .card .card-action a.btn.btn-success {
 	font-style: italic;
 	font-family: 'Cambria', sans-serif;
+}
+.card .card-table {
+	height: 192px;
 }
 .card .card-table tr.title td {
 	padding-bottom: 1rem;
@@ -2068,8 +2071,8 @@ select:disabled {
 }
 .infrastructure_item .infrastructure_item_img.infrastructure_item_img-12 {
 	background-image: url(sprite.png);
-	background-position: -129px -277px;
-	width: 126px;
+	background-position: 0px -277px;
+	width: 110px;
 	height: 78px;
 }
 .infrastructure_item .infrastructure_item_img.infrastructure_item_img-13 {
@@ -2134,8 +2137,8 @@ select:disabled {
 }
 .infrastructure_item .infrastructure_item_img.infrastructure_item_img-23 {
 	background-image: url(sprite.png);
-	background-position: -661px -224px;
-	width: 90px;
+	background-position: -238px -379px;
+	width: 113px;
 	height: 90px;
 }
 .infrastructure_item .infrastructure_item_img.infrastructure_item_img-24 {
