@@ -12,6 +12,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="description" content="Жилой квартал О Юность на Октябрьской набережной на берегу Невы с доступными квартирами с отделкой, мебелью и бытовой техникой"/>
 	<meta name="keywords" content="Юность, на берегу Невы, квартиры, мебель"/>
+	<link rel="stylesheet" href="css/flexslider.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600&amp;subset=cyrillic-ext" rel="stylesheet" type="text/css"/>
 </head>
@@ -177,7 +178,7 @@
 		</div>
 	</div>
 </div>
-<div class="navbar-fixed">
+<div class="navbar-fixed" id="first">
 	<nav>
 		<div class="nav-wrapper">
 			<div class="container">
@@ -208,7 +209,7 @@
 						<div class="call-back">
 							<p>Отдел продаж: </p>
 							<div class="phone">8 (812) 385-56-75</div>
-							<div href="#modal-call" data-title="Заказать звонок" class="btn btn-success full-width modal-trigger-call">Заказать звонок</div>
+							<div href="#modal-call" data-title="Заказать звонок" data-toggle="modal" data-target="#modal-call" class="btn btn-success full-width modal-trigger-call">Заказать звонок</div>
 						</div>
 					</div>
 				</div>
@@ -216,87 +217,30 @@
 		</div>
 	</nav>
 </div>
-<div class="section slider no-pad">
+<div class="section slider no-pad" id="second">
 	<div class="container row fluid-block">
 		<div class="col right sticker circle">
-			<h1 class="headline">Новый жилой квартал на Октябрьской набережной</h1>
+			<h1 class="headline">Жилой небоскрёб в живописной части Невского района</h1>
 			<p>
 
-				Квартиры с отделкой, мебелью и бытовой техникой
+				Старт продаж!<br>
+				Минимальные цены на квартиры
+
 			</p><a href="./docs/zhk_schastye-presentation.pdf" target="_blank" class="icon-pdf hover">Скачать презентацию</a>
 		</div>
 	</div>
 	<div class="row flexslider">
 		<ul class="slides">
-			<li style="background-image:url('./assets/img/youth/slider/1.jpg')"></li>
-			<li style="background-image:url('./assets/img/youth/slider/2.jpg')"></li>
-			<li style="background-image:url('./assets/img/youth/slider/4.jpg')"></li>
+			<li><img src="img/renders/1-1.jpg" alt=""/></li>
+			<li><img src="img/renders/1-2.jpg" alt=""/></li>
+			<li><img src="img/renders/1-3.jpg" alt=""/></li>
+			<li><img src="img/renders/2-1.jpg" alt=""/></li>
+			<li><img src="img/renders/2-2.jpg" alt=""/></li>
+			<li><img src="img/renders/2-3.jpg" alt=""/></li>
+			<li><img src="img/renders/2-4.jpg" alt=""/></li>
+			<li><img src="img/renders/2-5.jpg" alt=""/></li>
+			<li><img src="img/renders/2-6.jpg" alt=""/></li>
 		</ul>
-	</div>
-</div>
-<div id="second" class="section mini-slider no-pad">
-	<div class="row">
-		<div class="col l3 m3 s3 no-pad">
-			<div id="mini-map"></div>
-		</div>
-		<div class="col l1 m1 s1 no-pad">
-			<div href="#modal-call" data-title="Заявка на осмотр новостройки" class="view modal-trigger-call">
-				<div class="valign-wrapper">
-					<div class="valign center">
-						<div class="icon-edit"></div>Заявка на осмотр новостройки
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col l8 m8 s8 flexslider-mini no-pad">
-			<ul class="slides">
-				<li href="#modal-view" class="col l4 m4 s4 no-pad modal-trigger-view"><img large-src="./assets/img/youth/slider/3.jpg" alt="" style="background-image:url('./assets/img/youth/slider/3.jpg');" class="responsive-img"/>
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign center">
-							<div class="zoom"></div>
-							<p>Увеличить</p>
-						</div>
-					</div>
-				</li>
-				<li href="#modal-view" class="col l4 m4 s4 no-pad modal-trigger-view"><img large-src="./assets/img/youth/slider/5.jpg" alt="" style="background-image:url('./assets/img/youth/slider/5.jpg');" class="responsive-img"/>
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign center">
-							<div class="zoom"></div>
-							<p>Увеличить</p>
-						</div>
-					</div>
-				</li>
-				<li href="#modal-view" class="col l4 m4 s4 no-pad modal-trigger-view"><img large-src="./assets/img/youth/slider/6.png" alt="" style="background-image:url('./assets/img/youth/slider/6.png');" class="responsive-img"/>
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign center">
-							<div class="zoom"></div>
-							<p>Увеличить</p>
-						</div>
-					</div>
-				</li>
-				<li href="#modal-view" class="col l4 m4 s4 no-pad modal-trigger-view"><img large-src="./assets/img/youth/slider/7.jpg" alt="" style="background-image:url('./assets/img/youth/slider/7.jpg');" class="responsive-img"/>
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign center">
-							<div class="zoom"></div>
-							<p>Увеличить</p>
-						</div>
-					</div>
-				</li>
-				<li href="#modal-view" class="col l4 m4 s4 no-pad modal-trigger-view"><img large-src="./assets/img/youth/slider/8.jpg" alt="" style="background-image:url('./assets/img/youth/slider/8.jpg');" class="responsive-img"/>
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign center">
-							<div class="zoom"></div>
-							<p>Увеличить</p>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
 	</div>
 </div>
 <div id="third" class="section no-pad">
@@ -329,23 +273,20 @@
 			</div>
 		</div>
 		<div class="col content no-pad right">
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4033400" class="townhouse paid">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:80;rooms:3;price:5893800" data-id="28" data-img-first="./assets/img/youth/rooms/r3-89.3.png" data-title="3 комнатная квартира 89.3 м²" data-rooms="3;89.3;47.0;10.9;5 893 800 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
 						<div class="zoom"></div>
-						<p>
-
-							Оплачено<br/>26.10.2015
-						</p>
+						<p>Подробнее</p>
 					</div>
 				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
+				<div class="townhouse-title">3 комнатная квартира</div>
 				<div class="townhouse-img"><img src="img/plans/1 33,37.JPG" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">4.0 млн.руб.</div>
+				<div class="townhouse-descriptrion">5.8 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:80;rooms:3;price:5893800" data-id="28" data-img-first="./assets/img/youth/rooms/r3-89.3.png" data-title="3 комнатная квартира 89.3 м²" data-rooms="3;89.3;47.0;10.9;5 893 800 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:80;rooms:3;price:5893800" data-id="28" data-img-first="./assets/img/youth/rooms/r3-89.3.png" data-title="3 комнатная квартира 89.3 м²" data-rooms="3;89.3;47.0;10.9;5 893 800 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -358,7 +299,7 @@
 				<div class="townhouse-descriptrion">5.8 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:80;rooms:3;price:5471400" data-id="28" data-img-first="./assets/img/youth/rooms/r3-82.9.png" data-title="3 комнатная квартира 82.9 м²" data-rooms="3;82.9;46.8;15.5;5 471 400 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:80;rooms:3;price:5471400" data-id="28" data-img-first="./assets/img/youth/rooms/r3-82.9.png" data-title="3 комнатная квартира 82.9 м²" data-rooms="3;82.9;46.8;15.5;5 471 400 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -371,7 +312,7 @@
 				<div class="townhouse-descriptrion">5.4 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:80;rooms:3;price:5261750" data-id="27" data-img-first="./assets/img/youth/rooms/r3-81.52.png" data-title="3 комнатная квартира 81.52 м²" data-rooms="3;81.52;46.8;15.5;5 261 750 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:80;rooms:3;price:5261750" data-id="27" data-img-first="./assets/img/youth/rooms/r3-81.52.png" data-title="3 комнатная квартира 81.52 м²" data-rooms="3;81.52;46.8;15.5;5 261 750 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -384,7 +325,7 @@
 				<div class="townhouse-descriptrion">5.2 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4462200" data-id="26" data-img-first="./assets/img/youth/rooms/r2-66.6.png" data-title="2 комнатная квартира 66.6 м²" data-rooms="2;65.2;34.5;10;4 462 200 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4462200" data-id="26" data-img-first="./assets/img/youth/rooms/r2-66.6.png" data-title="2 комнатная квартира 66.6 м²" data-rooms="2;65.2;34.5;10;4 462 200 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -397,7 +338,7 @@
 				<div class="townhouse-descriptrion">4.4 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4303200" data-id="25" data-img-first="./assets/img/youth/rooms/r2-65.2.png" data-title="2 комнатная квартира 65.2 м²" data-rooms="2;65.2;32.5;14.5;4 303 200 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4303200" data-id="25" data-img-first="./assets/img/youth/rooms/r2-65.2.png" data-title="2 комнатная квартира 65.2 м²" data-rooms="2;65.2;32.5;14.5;4 303 200 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -410,7 +351,7 @@
 				<div class="townhouse-descriptrion">4.3 млн.руб.</div>
 			</div>
 			<!-- ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4114600" data-id="24" data-img-first="./assets/img/youth/rooms/r2-61.8.png" data-title="2 комнатная квартира 61.8 м²" data-rooms="2;61.8;36.8;12.3;4 114 600 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4114600" data-id="24" data-img-first="./assets/img/youth/rooms/r2-61.8.png" data-title="2 комнатная квартира 61.8 м²" data-rooms="2;61.8;36.8;12.3;4 114 600 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -423,7 +364,7 @@
 				<div class="townhouse-descriptrion">4.1 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4114000" data-id="23" data-img-first="./assets/img/youth/rooms/r2-60.5.png" data-title="2 комнатная квартира 60.5 м²" data-rooms="2;60.5;26.5;13.6;4 114 000 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4114000" data-id="23" data-img-first="./assets/img/youth/rooms/r2-60.5.png" data-title="2 комнатная квартира 60.5 м²" data-rooms="2;60.5;26.5;13.6;4 114 000 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -436,7 +377,7 @@
 				<div class="townhouse-descriptrion">4.1 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4049500" data-id="22" data-img-first="./assets/img/youth/rooms/r2-62.3.png" data-title="2 комнатная квартира 62.3 м²" data-rooms="2;62.3;36.5;13.6;4 033 400 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4049500" data-id="22" data-img-first="./assets/img/youth/rooms/r2-62.3.png" data-title="2 комнатная квартира 62.3 м²" data-rooms="2;62.3;36.5;13.6;4 033 400 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -449,7 +390,7 @@
 				<div class="townhouse-descriptrion">4.0 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4049500" data-id="21" data-img-first="./assets/img/youth/rooms/r2-62.3.png" data-title="2 комнатная квартира 62.3 м²" data-rooms="2;62.3;36.5;13.6;4 033 400 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4049500" data-id="21" data-img-first="./assets/img/youth/rooms/r2-62.3.png" data-title="2 комнатная квартира 62.3 м²" data-rooms="2;62.3;36.5;13.6;4 033 400 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -462,7 +403,7 @@
 				<div class="townhouse-descriptrion">4.0 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4033400" data-id="20" data-img-first="./assets/img/youth/rooms/r2-60.2.png" data-title="2 комнатная квартира 60.2 м²" data-rooms="2;60.2;31.3;10.5;4 033 400 Р" class="townhouse modal-trigger">
+			<div href="#modal-townhouse" data-toggle="modal" data-target="#modal-townhouse"  data-filter="sq:60;rooms:2;price:4033400" data-id="20" data-img-first="./assets/img/youth/rooms/r2-60.2.png" data-title="2 комнатная квартира 60.2 м²" data-rooms="2;60.2;31.3;10.5;4 033 400 Р" class="townhouse modal-trigger">
 				<div class="palette"></div>
 				<div class="valign-wrapper">
 					<div class="valign">
@@ -475,293 +416,7 @@
 				<div class="townhouse-descriptrion">4.0 млн.руб.</div>
 			</div>
 			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:60;rooms:2;price:4027400" data-id="19" data-img-first="./assets/img/youth/rooms/r2-61.96.png" data-title="2 комнатная квартира 61.96 м²" data-rooms="2;61.96;34.8;13.9;4 027 400 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="img/plans/" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">4.0 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:50;rooms:2;price:3854400" data-id="18" data-img-first="./assets/img/youth/rooms/r2-58.4.png" data-title="2 комнатная квартира 58.4 м²" data-rooms="2;58.4;29.8;8.9;3 854 400 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-58.4.png" alt="" class="responsive-img s"/></div>
-				<div class="townhouse-descriptrion">3.8 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:50;rooms:2;price:3847350" data-id="17" data-img-first="./assets/img/youth/rooms/r2-59.19.png" data-title="2 комнатная квартира 59.19 м²" data-rooms="2;59.19;26.6;9.9;3 847 350 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-59.19.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">3.8 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-id="1" data-img-first="./assets/img/youth/rooms/r2-57.95.png" data-title="2 (евро) комнатная квартира 54.6 м²" data-rooms="1;57.95;19.3;14.7;3766750" data-filter="sq:50;rooms:2;price:3 766 750 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-57.95.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">3.7 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-id="2" data-img-first="./assets/img/youth/rooms/r2-54.6.png" data-title="2 (евро) комнатная квартира 54.6 м²" data-rooms="1;54.6;16.4;19.9;3712800" data-filter="sq:50;rooms:2;price:3 712 800 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-54.6.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">3.7 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:50;rooms:2;price:3695800" data-id="3" data-img-first="./assets/img/youth/rooms/r2-54.35.png" data-title="2 (евро) комнатная квартира 54.35 м²" data-rooms="1;54.35;19.7;16.6;3 695 800 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-54.35.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">3.6 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:40;rooms:2;price:3484800" data-id="4" data-img-first="./assets/img/youth/rooms/r2-48.4.png" data-title="2 (евро) комнатная квартира" data-rooms="2;48.4;16.4;19.9;3 484 800 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-48.4.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">3.4 млн.руб.</div>
-			</div>
-			<!--/ok-->
-			<div href="#modal-townhouse" data-filter="sq:30;rooms:2;price:2979900" data-id="5" data-img-first="./assets/img/youth/rooms/r2-38.7.png" data-title="2 (евро) комнатная квартира 38.7 м²" data-rooms="2;38.7;13.3;15.9;2 979 900 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">2 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r2-38.7.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.9 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:40;rooms:1;price:2807000" data-id="6" data-img-first="./assets/img/youth/rooms/r1-41.1.png" data-title="1 комнатная квартира 41.1 м²" data-rooms="1;41.1;17.4;9.2;2 807 000 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-41.1.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.8 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:40;rooms:1;price:2788000" data-id="7" data-img-first="./assets/img/youth/rooms/r1-41.png" data-title="1 комнатная квартира 41 м²" data-rooms="1;41;16.5;11.4;2 788 000 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-41.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.7 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:40;rooms:1;price:2760800" data-id="8" data-img-first="./assets/img/youth/rooms/r1-40.6.png" data-title="1 комнатная квартира 40.6 м²" data-rooms="1;40.6;16.5;11.4;2 760 800 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-40.6.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.7 млн.руб.</div>
-			</div>
-			<!--// ok-->
-			<div href="#modal-townhouse" data-filter="sq:30;rooms:1;price:2716000" data-id="9" data-img-first="./assets/img/youth/rooms/r1-38.8.png" data-title="1 комнатная квартира 38.8 м²" data-rooms="1;38.8;14.7;10.6;2 716 000 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-38.8.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.7 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:30;rooms:1;price:2709000" data-id="10" data-img-first="./assets/img/youth/rooms/r1-38.7.png" data-title="1 комнатная квартира 38.7 м²" data-rooms="1;38.7;14.7;10.6;2 709 000 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-38.7.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.7 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:30;rooms:1;price:2706400" data-id="11" data-img-first="./assets/img/youth/rooms/r1-39.8.png" data-title="1 комнатная квартира 39.8 м²" data-rooms="1;39.8;17.3;11.8;2 706 400 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-39.8.png" alt="" class="responsive-img s"/></div>
-				<div class="townhouse-descriptrion">2.7 млн.руб.</div>
-			</div>
-			<!--/ok-->
-			<div href="#modal-townhouse" data-filter="sq:30;rooms:1;price:2689400" data-id="12" data-img-first="./assets/img/youth/rooms/r1-39.55.png" data-title="1 комнатная квартира 39.55 м²" data-rooms="1;39.55;16.7;9.9;2 689 400 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-39.55.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.6 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:30;rooms:1;price:2604400" data-id="13" data-img-first="./assets/img/youth/rooms/r1-38.3.png" data-title="1 комнатная квартира 38.3 м²" data-rooms="1;38.3;11.3;14.3;2 604 400 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-38.3.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.6 млн.руб.</div>
-			</div>
-			<!--// stud-->
-			<div href="#modal-townhouse" data-filter="sq:20;rooms:0;price:2456300" data-id="14" data-img-first="./assets/img/youth/rooms/r0-31.9.png" data-title="Квартира студия 31.9 м²" data-rooms="1;31.9;20.9;20.9;2 456 300 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">Квартира студия</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r0-31.9.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.4 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:20;rooms:0;price:2163700" data-id="14" data-img-first="./assets/img/youth/rooms/r0-28.1.png" data-title="Квартира студия 28.1 м²" data-rooms="1;28.1;19.7;19.7;2 163 700 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">Квартира студия</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r0-28.1.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.1 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:20;rooms:0;price:2017400" data-id="15" data-img-first="./assets/img/youth/rooms/r0-26.2.png" data-title="Квартира студия 26.2 м²" data-rooms="1;26.2;14.3;14.3;2 017 400 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">Квартира студия</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r0-26.2.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.0 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:20;rooms:0;price:1994300" data-id="16" data-img-first="./assets/img/youth/rooms/r0-25.9.png" data-title="Квартира студия 25.9 м²" data-rooms="1;25.9;16.3;16.3;1 994 300 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">Квартира студия</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r0-25.9.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">1.9 млн.руб.</div>
-			</div>
-			<!--ok-->
-			<div href="#modal-townhouse" data-filter="sq:20;rooms:0;price:1986000" data-id="16" data-img-first="./assets/img/youth/rooms/r0-25.8.png" data-title="Квартира студия 25.8 м²" data-rooms="1;25.8;14,3;16,3;1 986 000 Р" class="townhouse modal-trigger">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>Подробнее</p>
-					</div>
-				</div>
-				<div class="townhouse-title">Квартира студия</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r0-25.8.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">1.9 млн.руб.</div>
-			</div>
-			<div href="#modal-townhouse" data-filter="sq:40;rooms:1;price:2760800" class="townhouse reservations">
-				<div class="palette"></div>
-				<div class="valign-wrapper">
-					<div class="valign">
-						<div class="zoom"></div>
-						<p>
 
-							Забронировано до:<br/>29.11.2015
-						</p>
-					</div>
-				</div>
-				<div class="townhouse-title">1 комнатная квартира</div>
-				<div class="townhouse-img"><img src="./assets/img/youth/rooms/r1-40.6.png" alt="" class="responsive-img"/></div>
-				<div class="townhouse-descriptrion">2.7 млн.руб.</div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -916,7 +571,7 @@
 							<td>Срок кредитования</td>
 						</tr>
 					</table>
-					<div class="card-action"><a href="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</a></div>
+					<div class="card-action"><div href="#modal-call"  data-toggle="modal" data-target="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</div></div>
 				</div>
 				<div class="card">
 					<table class="card-table">
@@ -937,7 +592,7 @@
 							<td>Срок кредитования</td>
 						</tr>
 					</table>
-					<div class="card-action"><a href="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</a></div>
+					<div class="card-action"><div href="#modal-call"  data-toggle="modal" data-target="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</div></div>
 				</div>
 				<div class="card">
 					<table class="card-table">
@@ -958,7 +613,7 @@
 							<td>Срок кредитования</td>
 						</tr>
 					</table>
-					<div class="card-action"><a href="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</a></div>
+					<div class="card-action"><div href="#modal-call"  data-toggle="modal" data-target="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</div></div>
 				</div>
 				<div class="card">
 					<table class="card-table">
@@ -979,12 +634,12 @@
 							<td>Срок кредитования</td>
 						</tr>
 					</table>
-					<div class="card-action"><a href="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</a></div>
+					<div class="card-action"><div href="#modal-call" data-toggle="modal" data-target="#modal-call" data-title="Ипотека с господдержкой <br> Банк Санкт-Петербург" class="btn btn-success left modal-trigger-call">Отправить заявку</div></div>
 				</div>
 			</div>
 		</div>
 		<div class="col s12 m12 l12">
-			<div class="col s6 m6 l6 right-align"><a data-btn="Одобрить ипотеку" href="#modal-call" data-title="Одобрить ипотеку <br> в двух банках за 2 дня" class="hover icon-tick modal-trigger-call">
+			<div class="col s6 m6 l6 right-align"><a data-btn="Одобрить ипотеку" data-toggle="modal" data-target="#modal-call" href="#modal-call" data-title="Одобрить ипотеку <br> в двух банках за 2 дня" class="hover icon-tick modal-trigger-call">
 
 				Одобрить ипотеку в двух банках за 2 дня</a></div>
 			<div class="col s6 m6 l6 center"><a data-btn="Получить пакет документов" href="docs/ipoteka.docx" data-title="Скачать пакет документов" class="hover icon-download modal-trigger-call file">
@@ -1066,18 +721,21 @@
 	</div>
 	<div id="map" data-cords="59.892748,30.449223"></div>
 </div>
-<footer><a href="#modal-call" data-title="Записаться на экскурсию на объект" class="record modal-trigger-call">Записаться на экскурсию на объект</a>
+<footer><a  data-title="Записаться на экскурсию на объект" class="record modal-trigger-call"><div href="#modal-call" data-toggle="modal" data-target="#modal-call" >Записаться на экскурсию на объект</div></a>
 	<div class="container row">
 		<div class="brand-logo youth"></div>
 		<div class="call-back">
 			<p>Отдел продаж: </p>
 			<div class="phone">8 (812) 385-56-75</div>
-			<div href="#modal-call" data-title="Заказать звонок" class="btn btn-success full-width modal-trigger-call">Заказать звонок</div>
+			<div  data-toggle="modal" data-target="#modal-call" href="#modal-call" data-title="Заказать звонок" class="btn btn-success full-width modal-trigger-call">Заказать звонок</div>
 		</div>
 	</div>
 </footer>
 <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" defer="defer"></script>
 <!--<script type="text/javascript" src="./assets/js/all.js" defer="defer"></script>-->
-<script type="text/javascript" src="js/script.js" defer="defer"></script>
+<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
