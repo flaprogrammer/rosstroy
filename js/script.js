@@ -57,6 +57,20 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	});
 
+	$('#slider-price').ionRangeSlider({
+		type: "double",
+		grid: true,
+		min: 0,
+		max: 10000,
+		from: 0,
+		to: 10000,
+		prettify: true,
+		postfix: " тыс",
+		onFinish: function (data) {
+			console.log(data);
+		}
+	});
+
 
 
 });
