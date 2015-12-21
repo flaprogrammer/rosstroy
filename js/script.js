@@ -57,58 +57,71 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	});
 
-	$('#slider-price').ionRangeSlider({
-		type: "double",
-		grid: true,
-		min: 0,
-		max: 10000,
-		from: 0,
-		to: 10000,
-		prettify: true,
-		postfix: " тыс",
-		onFinish: function (data) {
-			console.log(data);
+
+
+
+
+
+
+
+
+	filterFlats = (function() {
+
+		var rooms = 'all';
+		var area = 0;
+		var price_from = 0;
+		var price_to = 10000;
+
+		$('.filter-area').on('click', function() {
+			area = $(this).attr('data-filter-sq');
+			filterIt();
+
+		});
+
+		$('.filter-room').on('click', function() {
+			rooms = $(this).attr('data-filter-rooms');
+			filterIt();
+		});
+
+		$('#slider-price').ionRangeSlider({
+			type: "double",
+			grid: true,
+			min: 0,
+			max: 10000,
+			from: 0,
+			to: 10000,
+			prettify: true,
+			postfix: " тыс",
+			onFinish: function (data) {
+				price_from = data.from;
+				price_to = data.to;
+				filterIt()
+			}
+		});
+
+		var filterIt = function() {
+			$('.townhouse').css('display', 'block');
+			for(var i=0; i<flats.length; i++) {
+				if (rooms=="all") break;
+				if (rooms!=flats[i].rooms) {
+					$('.townhouse[data-name="'+flats[i].name+'"]').css('display', 'none');
+				}
+			}
+			for(var i=0; i<flats.length; i++) {
+				if (area>flats[i].common) {
+					$('.townhouse[data-name="'+flats[i].name+'"]').css('display', 'none');
+				}
+			}
+			for(var i=0; i<flats.length; i++) {
+				if (price_from>flats[i].price || price_to<flats[i].price) {
+					$('.townhouse[data-name="'+flats[i].name+'"]').css('display', 'none');
+				}
+			}
 		}
-	});
 
-
+	})();
 
 });
-
-
-
-filterFlats = (function() {
-
-	var rooms = 'all';
-	var area = 0;
-
-	$('.filter-area').on('click', function() {
-		area = $(this).attr('data-filter-sq');
-		filterIt();
-
-	});
-
-	$('.filter-room').on('click', function() {
-		rooms = $(this).attr('data-filter-rooms');
-		filterIt();
-	});
-
-	var filterIt = function() {
-		$('.townhouse').css('display', 'block');
-		for(var i=0; i<flats.length; i++) {
-			if (rooms=="all") break;
-			if (rooms!=flats[i].rooms) {
-				$('.townhouse[data-name="'+flats[i].name+'"]').css('display', 'none');
-			}
-		}
-		for(var i=0; i<flats.length; i++) {
-			if (area>flats[i].common) {
-				$('.townhouse[data-name="'+flats[i].name+'"]').css('display', 'none');
-			}
-		}
-	}
-
-})();
 
 
 flats = [
@@ -116,6 +129,7 @@ flats = [
 		name: "C 31.72",
 		img: "C 31,72.JPG",
 		rooms: 0,
+		price: 5000,
 		common: 31.72,
 		live: 22.67,
 		kitchen: 0,
@@ -126,6 +140,7 @@ flats = [
 		img: "C 27,38.JPG",
 		common: 27.38,
 		rooms: 0,
+		price: 5000,
 		live: 17.65,
 		kitchen: 0,
 		balcony: 4.32
@@ -136,6 +151,7 @@ flats = [
 		common: 26.25,
 		live: 17.08,
 		rooms: 0,
+		price: 5000,
 		kitchen: 0,
 		balcony: 4.77
 	},
@@ -145,6 +161,7 @@ flats = [
 		common: 25.57,
 		live: 17.41,
 		rooms: 0,
+		price: 5000,
 		kitchen: 0,
 		balcony: 1.6
 	},
@@ -154,6 +171,7 @@ flats = [
 		common: 37.48,
 		live: 16.83,
 		rooms: 1,
+		price: 5000,
 		kitchen: 9.36,
 		balcony: 7.04
 	},
@@ -163,6 +181,7 @@ flats = [
 		common: 34.99,
 		live: 16.82,
 		rooms: 1,
+		price: 5000,
 		kitchen: 9.65,
 		balcony: 1.48
 	},
@@ -172,6 +191,7 @@ flats = [
 		common: 36.47,
 		live: 15.37,
 		rooms: 1,
+		price: 5000,
 		kitchen: 8.52,
 		balcony: 5.89
 	},
@@ -181,6 +201,7 @@ flats = [
 		common: 33.37,
 		live: 14.94,
 		rooms: 1,
+		price: 5000,
 		kitchen: 8.3,
 		balcony: 3.12
 	},
@@ -190,6 +211,7 @@ flats = [
 		common: 56.64,
 		live: 27.36,
 		rooms: 2,
+		price: 5000,
 		kitchen: 15.08,
 		balcony: 5
 	},
@@ -199,6 +221,7 @@ flats = [
 		common: 57.78,
 		live: 26.95,
 		rooms: 2,
+		price: 5000,
 		kitchen: 14.72,
 		balcony: 5.27
 	},
@@ -208,6 +231,7 @@ flats = [
 		common: 54.56,
 		live: 26.17,
 		rooms: 2,
+		price: 5000,
 		kitchen: 14.52,
 		balcony:3.04
 	}
