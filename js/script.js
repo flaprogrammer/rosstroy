@@ -24,9 +24,24 @@ $(document).ready(function() {
 
 	});
 
+	$(".modal-call").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+			e.preventDefault();
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+	            type: "POST", //Метод отправки
+	            url: "send.php", //путь до php фаила отправителя
+	            data: form_data,
+	            success: function() {
+                   //код в этом блоке выполняется при успешной отправке сообщения
+                   alert("Ваше сообщение отправлено!");
+               }
+            });
+            $('.modal-wrapper').trigger('click');
+    });
+
 	$('.flexslider').flexslider();
 
-	$('a').click(function(){
+	$('nav a').click(function(){
 		$('html, body').animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top
 		}, 500);
