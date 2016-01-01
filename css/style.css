@@ -1537,6 +1537,9 @@ span.vtb {
 .townhouse .townhouse-descriptrion {
 	font-size: 18px;
 	color: #005297;
+	position: absolute;
+	bottom: 10px;
+	left: 50px;
 }
 .townhouse .townhouse-title {
 	font-size: 20px;
@@ -2178,6 +2181,9 @@ select:disabled {
 .slider {
 	min-height: 500px;
 }
+.flexslider {
+	margin-bottom: 10px;
+}
 .slider .flexslider .slides>li {
 	min-height: 500px;
 	background-size: cover;
@@ -2186,6 +2192,7 @@ select:disabled {
 }
 .flexslider-mini {
 	position: static;
+	height: 230px;
 }
 .flexslider-mini .slides li {
 	height: 230px;
@@ -2237,7 +2244,7 @@ select:disabled {
 	width: 40px;
 	height: 40px;
 	left: 0;
-	top: 0;
+	top: 20px;
 	position: relative;
 	text-indent: 99999px;
 	color: transparent;
@@ -2250,7 +2257,7 @@ select:disabled {
 	left: 25px;
 }
 .flex-direction-nav .flex-nav-prev a:after {
-	content: '';
+	content: '>';
 	top: 12px;
 	left: 15px;
 	position: absolute;
@@ -2278,6 +2285,7 @@ select:disabled {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	margin-bottom: 5px;
 }
 .flexslider .slides, .flexslider-mini .slides {
 	margin: 0;

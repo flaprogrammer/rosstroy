@@ -20,6 +20,26 @@ $(document).ready(function() {
 
 		myMap.geoObjects.add(myPlacemark);
 
+		var myMap2 = new ymaps.Map('map2', {
+			center: [59.830142, 30.544696],
+			zoom: 15,
+			// Обратите внимание, что в API 2.1 по умолчанию карта создается с элементами управления.
+			// Если вам не нужно их добавлять на карту, в ее параметрах передайте пустой массив в поле controls.
+			controls: []
+		});
+
+		var myPlacemark2 = new ymaps.Placemark(myMap2.getCenter(), {
+			balloonContentBody: [
+				'<address>',
+				'<strong>Заводская, 15</strong>',
+				'<br/>',
+				'</address>'
+			].join(''),
+			hintContent: "Заводская, 15"
+		});
+
+		myMap2.geoObjects.add(myPlacemark2);
+
 
 
 	});
@@ -38,8 +58,59 @@ $(document).ready(function() {
             });
             $('.modal-wrapper').trigger('click');
     });
+	$(".form-flat").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+			e.preventDefault();
+            var form_data = $(this).serialize(); //собераем все данные из формы
+			console.log(form_data);
+            $.ajax({
+	            type: "POST", //Метод отправки
+	            url: "send.php", //путь до php фаила отправителя
+	            data: form_data,
+	            success: function() {
+                   //код в этом блоке выполняется при успешной отправке сообщения
+                   alert("Ваше сообщение отправлено!");
+               }
+            });
+    });
+	$(".form-ipoteka").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+			e.preventDefault();
+            var form_data = $(this).serialize(); //собераем все данные из формы
+			console.log(form_data);
+            $.ajax({
+	            type: "POST", //Метод отправки
+	            url: "send.php", //путь до php фаила отправителя
+	            data: form_data,
+	            success: function() {
+                   //код в этом блоке выполняется при успешной отправке сообщения
+                   alert("Ваше сообщение отправлено!");
+               }
+            });
+    });
+	$(".form-docs").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+			e.preventDefault();
+            var form_data = $(this).serialize(); //собераем все данные из формы
+			console.log(form_data);
+            $.ajax({
+	            type: "POST", //Метод отправки
+	            url: "send.php", //путь до php фаила отправителя
+	            data: form_data,
+	            success: function() {
+                   //код в этом блоке выполняется при успешной отправке сообщения
+                   alert("Ваше сообщение отправлено!");
+               }
+            });
+		window.location = "/docs/ipoteka.docx"
+    });
 
 	$('.flexslider').flexslider();
+	$('.flexslider-mini').flexslider({
+		animation: "slide",
+		controlNav: false,
+		itemWidth: 350,
+		itemMargin: 3,
+		animationLoop: false,
+		slideshow: false,
+	});
 
 	$('nav a').click(function(){
 		$('html, body').animate({
@@ -64,12 +135,21 @@ $(document).ready(function() {
 		$('.js-kitchen').html(flats[index].kitchen);
 		$('.js-balcony').html(flats[index].balcony);
 		$('.js-room-img').attr('src', 'img/plans/'+flats[index].img);
-		$('#modal-townhouse h2').html('Имя')
+		$('#modal-townhouse h2').html(flats[index].text);
+		$('.form-flat input[name="utm_name"]').val(flats[index].name);
+		$('.form-ipoteka input[name="utm_name"]').val(flats[index].name);
+		$('.form-docs input[name="utm_name"]').val(flats[index].name);
 	}
 
 	$('.filter-item').on('click', function() {
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
+
+	});
+
+	$('.townhouse').each(function(i, el) {
+
+		dataName = $(el).attr('data-name');
+		price = flats.filter(function(flat) {return flat.name==dataName})[0].price;
+		$(el).find('.townhouse-descriptrion').html(price +" 000 руб.");
 	});
 
 
@@ -88,25 +168,51 @@ $(document).ready(function() {
 		var price_to = 10000;
 
 		$('.filter-area').on('click', function() {
-			area = $(this).attr('data-filter-sq');
+
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				area = 0;
+			}
+			else {
+				$(this).siblings().removeClass('active');
+				$(this).addClass('active');
+				area = $(this).attr('data-filter-sq');
+			}
+
 			filterIt();
 
 		});
 
 		$('.filter-room').on('click', function() {
-			rooms = $(this).attr('data-filter-rooms');
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				rooms = 'all';
+			}
+			else {
+				$(this).siblings().removeClass('active');
+				$(this).addClass('active');
+				rooms = $(this).attr('data-filter-rooms');
+			}
+
 			filterIt();
 		});
 
+
+
+		var pricesArray = flats.map(function(flat) {
+			return flat.price;
+		});
+		var minPrice = Math.min.apply(null, pricesArray);
+		var maxPrice = Math.max.apply(null, pricesArray);
 		$('#slider-price').ionRangeSlider({
 			type: "double",
 			grid: true,
-			min: 0,
-			max: 10000,
-			from: 0,
-			to: 10000,
+			min: minPrice,
+			max: maxPrice,
+			from: minPrice,
+			to: maxPrice,
 			prettify: true,
-			postfix: " тыс",
+			postfix: " 000",
 			onFinish: function (data) {
 				price_from = data.from;
 				price_to = data.to;
@@ -143,8 +249,9 @@ flats = [
 	{
 		name: "C 31.72",
 		img: "C 31,72.JPG",
+		text: "Квартира-студия",
 		rooms: 0,
-		price: 5000,
+		price: 2040,
 		common: 31.72,
 		live: 22.67,
 		kitchen: 0,
@@ -153,9 +260,10 @@ flats = [
 	{
 		name: "C 27.38",
 		img: "C 27,38.JPG",
+		text: "Квартира-студия",
 		common: 27.38,
 		rooms: 0,
-		price: 5000,
+		price: 1770,
 		live: 17.65,
 		kitchen: 0,
 		balcony: 4.32
@@ -163,90 +271,99 @@ flats = [
 	{
 		name: "C 26.25",
 		img: "C 26,25.JPG",
+		text: "Квартира-студия",
 		common: 26.25,
 		live: 17.08,
 		rooms: 0,
-		price: 5000,
+		price: 1710,
 		kitchen: 0,
 		balcony: 4.77
 	},
 	{
 		name: "C 25.57",
 		img: "C 25,57.JPG",
+		text: "Квартира-студия",
 		common: 25.57,
 		live: 17.41,
 		rooms: 0,
-		price: 5000,
+		price: 1700,
 		kitchen: 0,
 		balcony: 1.6
 	},
 	{
 		name: "1 37.48",
 		img: "1 37,48.JPG",
+		text: "1 комнатная квартира",
 		common: 37.48,
 		live: 16.83,
 		rooms: 1,
-		price: 5000,
+		price: 2650,
 		kitchen: 9.36,
 		balcony: 7.04
 	},
 	{
 		name: "1 34.99",
 		img: "1 34,99.JPG",
+		text: "1 комнатная квартира",
 		common: 34.99,
 		live: 16.82,
 		rooms: 1,
-		price: 5000,
+		price: 2330,
 		kitchen: 9.65,
 		balcony: 1.48
 	},
 	{
 		name: "1 36.47",
 		img: "1 36,47.JPG",
+		text: "1 комнатная квартира",
 		common: 36.47,
 		live: 15.37,
 		rooms: 1,
-		price: 5000,
+		price: 2250,
 		kitchen: 8.52,
 		balcony: 5.89
 	},
 	{
 		name: "1 33.37",
 		img: "1 33,37.JPG",
+		text: "1 комнатная квартира",
 		common: 33.37,
 		live: 14.94,
 		rooms: 1,
-		price: 5000,
+		price: 2160,
 		kitchen: 8.3,
 		balcony: 3.12
 	},
 	{
 		name: "2 56.64",
 		img: "2 56,64.JPG",
+		text: "2 комнатная квартира",
 		common: 56.64,
 		live: 27.36,
 		rooms: 2,
-		price: 5000,
+		price: 3490,
 		kitchen: 15.08,
 		balcony: 5
 	},
 	{
 		name: "2 57.78",
 		img: "2 57,78.JPG",
+		text: "2 комнатная квартира",
 		common: 57.78,
 		live: 26.95,
 		rooms: 2,
-		price: 5000,
+		price: 3500,
 		kitchen: 14.72,
 		balcony: 5.27
 	},
 	{
 		name: "2 54.56",
 		img: "2 54,56.JPG",
+		text: "2 комнатная квартира",
 		common: 54.56,
 		live: 26.17,
 		rooms: 2,
-		price: 5000,
+		price: 3400,
 		kitchen: 14.52,
 		balcony:3.04
 	}
