@@ -1,6 +1,6 @@
 ﻿<?
 
-    $to = 'info@ekaterina-petr.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
+    $to = "info@ekaterina-petr.ru"; //Почта получателя, через запятую можно указать сколько угодно адресов
     $subject = 'Обратный звонок'; //Заголовок сообщения
     $message = '
             <html>
@@ -8,9 +8,9 @@
                     <title>'.$subject.'</title>
                 </head>
                 <body>
-                    <p>Имя: '.$_POST['name'].'</p>
-                    <p>Телефон: '.$_POST['phone'].'</p>
-                    <p>Квартира: '.$_POST['utm_name'].'</p>
+                    <p>Имя: '.$_POST["name"].'</p>
+                    <p>Телефон: '.$_POST["phone"].'</p>
+                    <p>Квартира: '.$_POST["utm_name"].'</p>
                 </body>
             </html>'; //Текст нащего сообщения можно использовать HTML теги
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
