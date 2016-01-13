@@ -11,6 +11,7 @@
                     <p>Имя: '.$_POST["name"].'</p>
                     <p>Телефон: '.$_POST["phone"].'</p>
                     <p>Квартира: '.$_POST["utm_name"].'</p>
+                    <p>Форма, откуда отправлено письмо: '.$_POST["formtype"].'</p>
                 </body>
             </html>'; //Текст нащего сообщения можно использовать HTML теги
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма

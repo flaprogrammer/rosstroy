@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 	});
 
-	$(".modal-call").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+	$(".main-modal-form").submit(function(e) { //устанавливаем событие отправки для формы с id=form
 			e.preventDefault();
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 		dataName = $(el).attr('data-name');
 		price = flats.filter(function(flat) {return flat.name==dataName})[0].price;
-		$(el).find('.townhouse-descriptrion').html(price +" 000 руб.");
+		$(el).find('.townhouse-descriptrion').html(Math.floor(price/1000)+" "+ price%1000 +" 000 руб.");
 	});
 
 

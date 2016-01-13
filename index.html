@@ -31,8 +31,9 @@
 				<h4 class="center">Заказать звонок </h4>
 				<div class="ligature"></div>
 			</div>
-			<form class="modal-call row modal-section-info">
+			<form class="modal-call main-modal-form row modal-section-info">
 				<input id="type" type="hidden" name="type"/>
+				<input type="hidden" name="formtype" value="Обратный звонок"/>
 				<input type="hidden" name="utm_source" value=""/>
 				<input type="hidden" name="utm_medium" value=""/>
 				<input type="hidden" name="utm_campaign" value=""/>
@@ -87,6 +88,7 @@
 					</div>
 					<div class="modal-section">
 						<form id="modal-form" class=" form-flat row modal-section-info">
+							<input type="hidden" name="formtype" value="Форма 'Забронировать'"/>
 							<input type="hidden" name="utm_name" value=""/>
 							<input type="hidden" name="utm_source" value=""/>
 							<input type="hidden" name="utm_medium" value=""/>
@@ -129,6 +131,7 @@
 										</div>
 										<div class="collapsible-body">
 											<form class="modal-call form-ipoteka row modal-section-info">
+												<input type="hidden" name="formtype" value="Форма 'Ипотека'"/>
 												<input type="hidden" name="utm_name" value=""/>
 												<input type="hidden" name="utm_source" value=""/>
 												<input type="hidden" name="utm_medium" value=""/>
@@ -154,6 +157,8 @@
 										</div>
 										<div class="collapsible-body">
 											<form class="modal-call form-docs row modal-section-info">
+												<input type="hidden" name="formtype" value="Пакет документов"/>
+												<input type="hidden" name="utm_name" value=""/>
 												<input type="hidden" name="utm_source" value=""/>
 												<input type="hidden" name="utm_medium" value=""/>
 												<input type="hidden" name="utm_campaign" value=""/>
@@ -230,7 +235,7 @@
 				Старт продаж!<br>
 				Минимальные цены на квартиры
 
-			</p><a href="docs/Razreshenie_na_stroitelstvo.pdf" target="_blank" class="icon-pdf hover">Скачать презентацию</a>
+			</p><a href="docs/ZhK_Ekaterina_GOTOVO_final.pdf" target="_blank" class="icon-pdf hover">Скачать презентацию</a>
 		</div>
 	</div>
 	<div class="row flexslider">
@@ -242,7 +247,7 @@
 	</div>
 	<div class="row">
 		<div class="col l3 m3 s3 no-pad">
-			<div class="ymaps" id="map2" style="width: 337px; height: 230px;"></div>
+			<div class="ymaps" id="map2" style="height: 230px;"></div>
 		</div>
 		<div class="col l1 m1 s1 no-pad">
 			<div href="#modal-call"  data-toggle="modal" data-target="#modal-call" data-title="Заявка на осмотр новостройки" class="view modal-trigger-call">
@@ -450,7 +455,7 @@
 		<div class="col s12 m12 l12 center catherine">
 			<div class="fact">
 				<h1>
-					Более <div class="big">30</div>
+					Более<div class="big">&nbsp;30</div>
 				</h1>
 				<p>
 
@@ -459,13 +464,13 @@
 			</div>
 			<div class="fact big" style="width:200px">
 				<h1>
-					<div class="big">214ФЗ </div>
+					<div class="big">214 </div>ФЗ
 				</h1>
 				<p>регулирует безопасность строительства</p>
 			</div>
 			<div class="fact">
 				<h1>
-					От<div class="big">1,6</div><br/>млн.р рублей
+					От<div class="big">1,7</div><br/>млн.р рублей
 				</h1>
 				<p>стоимость квартир
 				</p>
@@ -558,7 +563,7 @@
 			</div>
 		</div>
 		<div class="col s12 m12 l12 center bt-pad">
-			<a href="docs/Razreshenie_na_stroitelstvo.pdf" target="_blank"><div href="#modal-call" data-title="Скачать презентацию" data-href="./docs/zhk_schastye-presentation.pdf" target="_blank" class="btn btn-success icon-btn modal-trigger-call file">
+			<a href="docs/ZhK_Ekaterina_GOTOVO_final.pdf" target="_blank"><div href="#modal-call" data-title="Скачать презентацию" data-href="./docs/zhk_schastye-presentation.pdf" target="_blank" class="btn btn-success icon-btn modal-trigger-call file">
 				<div class="icon-pdf left"></div>Скачать презентацию
 			</div></a>
 		</div>
@@ -680,37 +685,6 @@
 		</div>
 		<div class="col s12 m12 l12">
 			<ul class="docs-list">
-				<li class="docs-list-item"><a href="docs/Izmenenia_v_proektnuyu_deklaratsiyu_ot_2_dekabrya_2015_g.pdf" target="_blank">
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign">
-							<div class="zoom"></div>
-							<p>Скачать</p>
-						</div>
-					</div></a>
-					<p class="center">Изменения в проектную декларацию от 2 декабря 2015г</p>
-				</li>
-				<li class="docs-list-item"><a href="docs/Izmenenia_v_proektnuyu_deklaratsiyu_ot_5_noyabrya_2015_g.pdf" target="_blank">
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign">
-							<div class="zoom"></div>
-							<p>Скачать</p>
-						</div>
-					</div></a>
-					<p class="center">Изменения в проектную декларацию от 5 ноября 2015г</p>
-				</li>
-				<li class="docs-list-item"><a href="docs/Proektnaya_deklaratsia.pdf" target="_blank">
-					<div class="palette"></div>
-					<div class="valign-wrapper">
-						<div class="valign">
-							<div class="zoom"></div>
-							<p>Скачать</p>
-						</div>
-					</div></a>
-					<p class="center">Проектная декларация
-					</p>
-				</li>
 				<li class="docs-list-item"><a href="docs/Razreshenie_na_stroitelstvo.pdf" target="_blank">
 					<div class="palette"></div>
 					<div class="valign-wrapper">
@@ -723,6 +697,40 @@
 						Разрешение на строительство
 					</p>
 				</li>
+				<li class="docs-list-item"><a href="docs/Proektnaya_deklaratsia.pdf" target="_blank">
+					<div class="palette"></div>
+					<div class="valign-wrapper">
+						<div class="valign">
+							<div class="zoom"></div>
+							<p>Скачать</p>
+						</div>
+					</div></a>
+					<p class="center">Проектная декларация
+					</p>
+				</li>
+				<li class="docs-list-item"><a href="docs/Izmenenia_v_proektnuyu_deklaratsiyu_ot_5_noyabrya_2015_g.pdf" target="_blank">
+					<div class="palette"></div>
+					<div class="valign-wrapper">
+						<div class="valign">
+							<div class="zoom"></div>
+							<p>Скачать</p>
+						</div>
+					</div></a>
+					<p class="center">Изменения в проектную декларацию от 5 ноября 2015г</p>
+				</li>
+				<li class="docs-list-item"><a href="docs/Izmenenia_v_proektnuyu_deklaratsiyu_ot_2_dekabrya_2015_g.pdf" target="_blank">
+					<div class="palette"></div>
+					<div class="valign-wrapper">
+						<div class="valign">
+							<div class="zoom"></div>
+							<p>Скачать</p>
+						</div>
+					</div></a>
+					<p class="center">Изменения в проектную декларацию от 2 декабря 2015г</p>
+				</li>
+
+
+
 			</ul>
 		</div>
 		<div class="col s12 m12 l12 center">
