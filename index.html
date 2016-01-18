@@ -54,6 +54,36 @@
 		</div>
 	</div>
 </div>
+<div id="modal-presentation" class="modal-wrapper">
+	<div class="modal">
+		<div class="modal-content small"><a class="modal-close modal-action"></a>
+			<div class="col s12">
+				<h4 class="center">Чтобы скачать презентацию, пожалуйста, введите свои данные </h4>
+				<div class="ligature"></div>
+			</div>
+			<form class="modal-call presentation-modal-form row modal-section-info">
+				<input id="type" type="hidden" name="type"/>
+				<input type="hidden" name="formtype" value="Скачивание презентации"/>
+				<input type="hidden" name="utm_source" value=""/>
+				<input type="hidden" name="utm_medium" value=""/>
+				<input type="hidden" name="utm_campaign" value=""/>
+				<input type="hidden" name="utm_term" value=""/>
+				<input type="hidden" name="utm_content" value=""/>
+				<div class="input-field col s12 no-pad-left">
+					<!--label(for="name-call" data-error="wrong" data-success="right" placeholder="Имя") -->
+					<input id="name-call" type="text" name="name" placeholder="Имя" required="required" class="validate"/>
+				</div>
+				<div class="input-field col s12 no-pad-left">
+					<!--label(for="phone-call" data-error="wrong" data-success="right") Телефон-->
+					<input id="phone-call" type="text" name="phone" required="required" placeholder="Телефон" class="mask validate"/>
+				</div>
+				<div class="input-field col s12 no-pad-left">
+					<input type="submit" value="Отправить" class="btn btn-success"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 <div id="modal-townhouse" class="modal-wrapper">
 	<div class="modal">
 		<div class="modal-content townhouse-content"><a class="modal-close modal-action"></a>
@@ -235,7 +265,9 @@
 				Старт продаж!<br>
 				Минимальные цены на квартиры
 
-			</p><a href="docs/ZhK_Ekaterina_GOTOVO_final.pdf" target="_blank" class="icon-pdf hover">Скачать презентацию</a>
+			</p>
+			<!--<a href="docs/ZhK_Ekaterina_GOTOVO_final.pdf" target="_blank" class="icon-pdf hover">Скачать презентацию</a>-->
+			<span class="icon-pdf hover" href="#modal-presentation"  data-toggle="modal" data-target="#modal-presentation">Скачать презентацию</span>
 		</div>
 	</div>
 	<div class="row flexslider">
@@ -563,7 +595,7 @@
 			</div>
 		</div>
 		<div class="col s12 m12 l12 center bt-pad">
-			<a href="docs/ZhK_Ekaterina_GOTOVO_final.pdf" target="_blank"><div href="#modal-call" data-title="Скачать презентацию" data-href="./docs/zhk_schastye-presentation.pdf" target="_blank" class="btn btn-success icon-btn modal-trigger-call file">
+			<a href="##"><div href="#modal-presentation"  data-toggle="modal" data-target="#modal-presentation"  class="btn btn-success icon-btn modal-trigger-call file">
 				<div class="icon-pdf left"></div>Скачать презентацию
 			</div></a>
 		</div>
